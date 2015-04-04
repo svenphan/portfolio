@@ -39,6 +39,7 @@ $(".Jawbone").on({
     click: function (){
          $(this).off('mouseleave');
          $('#workDetailContainer').fadeIn("slow");
+         $('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,.svenType').hide();
     }
 });
 
@@ -58,8 +59,8 @@ $(".DutchDesign").on({
 });
 
 
-$("#pugButton").on('click',function(){
-    $('#glennthepug').show();
-    $('.svenType').hide();
-})
+// $("#pugButton").on('click',function(){
+//     $('#glennthepug').show();
+//     $('.svenType').hide();
+// })
 });
