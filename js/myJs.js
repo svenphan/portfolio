@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 //Default Hide
-$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,#workDetailContainer,#glennthepug').hide();
+//$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,#workDetailContainer,#glennthepug').hide();
+$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,#glennthepug').hide();
 
 //Creating a Button hover for each work element
 //Jordan Hover Buton
