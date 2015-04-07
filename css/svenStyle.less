@@ -48,6 +48,11 @@
     font-family: CrimsonTextSemiBold; src: url('../css/fonts/CrimsonText-Semibold.ttf');
 }
 
+/*Colors of Autumn*/
+@font-face {
+    font-family: colorsAutumn; src: url('../css/fonts/Colors Of Autumn.ttf');
+}
+
 
 /*LESS Styles*/
 .tbBorder {
@@ -138,7 +143,8 @@ video {
     color: white;
     letter-spacing: 5px;
     text-align:center;
-    margin-bottom:2%;
+    margin:0;
+    font-family:colorsAutumn;
 }
 /*---------*/
 
@@ -147,6 +153,11 @@ video {
 	top: 0;
 }
 
+#topBorder.scrollStyle{
+    height:50px;
+    transition:all 0.5s;
+    z-index:1;
+}
 
 
 #rightBorder {
@@ -270,7 +281,7 @@ img {
 
 
 
-#workDetailContainer{
+.workDetailContainer{
     .positionFixed;
     overflow-y:scroll;
     background:white;
@@ -390,9 +401,7 @@ img {
     z-index:5;
 }
 
-.workNav.scrollStyle{
-    background:black;
-}
+
 .workDescription{
     float:left;
     color:white;
@@ -410,7 +419,6 @@ img {
     background-position:center center;
     width:100%;
     height:60%;
-    z-index:-2;
     position:relative;
     display:table;
 }
@@ -501,10 +509,14 @@ img {
 
 .smallSquare h3{
     color:black;
+    font-size:0.85rem;
+
 }
 .smallSquare p{
     .workParagraphs;
     color:black;
+    font-size:0.85rem;
+    margin:0;
 }
 
 blockquote{
@@ -515,11 +527,12 @@ blockquote{
 
 .fullBleedImage{
     #workSplash;
+    height:75%;
      background-image:url('../img/hangarCube.jpg');
 }
 
 #renderedCube{
-    background-image:url('../img/jordanHome.jpg');
+    background-image:url('../img/introRender.png');
     background-size:cover;
     background-position:center center;
     background-repeat:no-repeat;
@@ -542,19 +555,6 @@ blockquote{
 }
 
 
-/*footer*/
-
-footer{
-    height:30%;
-    background-image:url('../img/jordanHome.jpg');
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-    float:left;
-    width:100%;
-    display:table;
-}
-
 .callToAction{
     margin: 0 auto;
     display: table-cell;
@@ -565,11 +565,62 @@ footer{
     text-align: center;
     color: white;
     z-index: 5;
-    width: 25%;
+    width: 20%;
     padding: 1%;
     border: 1px solid white;
-    margin:0 auto;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
 }
+
+.callToAction h3:hover{
+    background:black;
+    transition:all 2s;
+}
+
+.roleHeader{
+    color: white;
+    margin: 0;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+
+#jordanMobile{
+    background:url('../img/mobileExperienceJoradn.png');
+}
+
+#processSketch{
+    background:url('../img/jordanProcess.jpg');
+
+}
+
+#prototypeJordan video{
+
+
+}
+
+/*footer*/
+
+footer{
+    height:50%;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    float:left;
+    width:100%;
+    display:table;
+}
+
+#mxrkProject{
+    background:url('../img/mxrkShirt.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
 /*Animations*/
 
 /* Chrome, Safari, Opera */

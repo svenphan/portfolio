@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
 //Default Hide
-//$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,#workDetailContainer,#glennthepug').hide();
-$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,#glennthepug').hide();
+$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,.workDetailContainer,#glennthepug').hide();
+//$('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,#glennthepug').hide();
 
 //Creating a Button hover for each work element
 //Jordan Hover Buton
@@ -19,6 +19,11 @@ $(".Jordan").on({
         $('.workContainerJordan').hide();
         $('.svenType').fadeIn("slow");
         
+    },
+    click: function (){
+         $(this).off('mouseleave');
+         $('.workDetailContainer').fadeIn("slow");
+         $('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,.svenType').hide();
     }
 });
 
@@ -36,12 +41,8 @@ $(".Jawbone").on({
         $('.workContainerJawbone').hide();
         $('.svenType').fadeIn("slow");
         
-    },
-    click: function (){
-         $(this).off('mouseleave');
-         $('#workDetailContainer').fadeIn("slow");
-         $('.workContainerJordan,.workContainerJawbone,.workContainerDutchDesign,.svenType').hide();
     }
+    
 });
 
 //DutchDesign Button
@@ -57,6 +58,12 @@ $(".DutchDesign").on({
         $('.workContainerDutchDesign').hide();
         $('.svenType').fadeIn("slow");
     }
+});
+
+$(".closeBtn").on('click',function(){
+    $('.workDetailContainer').hide();
+    $('.svenType').show();
+    $('.Jawbone,.DutchDesign,.Jordan').removeClass('fade');
 });
 
 
